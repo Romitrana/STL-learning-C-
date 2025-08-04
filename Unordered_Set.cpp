@@ -17,5 +17,43 @@ int main(){
        for(int ele : mySet){
         cout<<ele<<" ";
     }
+
+     //check set is empty 
+     if(mySet.empty()){
+        cout<<"Set is empty"<<endl;
+     }else{ 
+          cout<<"Set is Not empty"<<endl;
+     }
+     cout<<endl;
+     //count in set
+     if(mySet.count(50)){
+        cout<<"50 is present"<<endl;
+     }else{
+        cout<<"50 is Not present"<<endl;
+     }
+
+     //find
+
+     auto it = mySet.find(40);
+     if(it!=mySet.end()){
+        cout<<"40 is found"<<endl;
+     }else{ 
+        cout<<"40 does not exist in set";
+     }
+
+    //erase
+    mySet.erase(60); 
+   for(int ele : mySet){
+        cout<<ele<<" ";
+    }
+    //clear
+    mySet.clear();
+
+   for(int ele : mySet){
+        cout<<ele<<" ";
+    }
+    if(mySet.empty()){
+        cout<<endl<<"whole set is empty now";
+    }
     return 0;
 }
