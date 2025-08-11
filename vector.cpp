@@ -45,7 +45,7 @@ cout<<"--sort--"<<endl;
 //     cout<<"vector is empty"<<endl;
 //    }
 
-   auto maxi = max_element(v.begin(),v.end());
+   auto maxi = max_element(v.begin(),v.end()); //algo
    auto mini = min_element(v.begin(),v.end());
    cout<<"Max = "<<*maxi<<" and min = "<<*mini<<endl;
    cout << "distance of " << *maxi << " from begin index is " << distance(v.begin(), mini);  //gives a zero-based index.

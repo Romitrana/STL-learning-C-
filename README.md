@@ -134,8 +134,139 @@ v1.empty();
 
 v1.size();
 
+# reverse()
+
+- reverse the vector (from algorithm headfile)
+
 NOTE : ❌ No direct function like push_front() or pop_front() exists for vector
 
 vector<int> v(5); // size = 5, all elements initialized to 0
 Or:
 vector<int> v(5, -1); // size = 5, all elements initialized to -1
+
+- cbegin() - it refers to the first element of the vector.
+- cend() - it refers to the theoretical element after the last element of the vector.
+- rbegin() - it points to the last element of the vector.
+- rend() - it points to the theoretical element before the first element of the vector.
+
+# 3. Set in C++ STL ✅
+
+A set in STL is a container that stores unique elements in a particular order. Every operation on a set takes O(1) complexity in the average case and takes O(n) in the worst case.
+
+set<object_type> variable_name;
+
+Functions in set:
+
+# insert()
+
+– to insert an element in the set.
+set<int> s;
+s.insert(1);
+s.insert(2);
+
+# begin()
+
+– return an iterator pointing to the first element in the set.
+s.begin();
+
+# end()
+
+– returns an iterator to the theoretical element after the last element.
+s.end();
+
+# count()
+
+– returns true or false based on whether the element is present in the set or not.
+set<int> s;
+s.insert(1);
+s.insert(2);
+s.count(2); //returns true
+
+# clear()
+
+– deletes all the elements in the set.
+s.clear();
+
+# find()
+
+– to search an element in the set.
+set<int> s;
+s.insert(1);
+s.insert(2);
+if(s.find(2)!=s.end())
+cout<<"true"<<endl;
+
+# erase()
+
+– to delete a single element or elements between a particular range.
+s.erase();
+
+# size()
+
+– returns the size of the set.
+s.size();
+
+# empty()
+
+– to check if the set is empty or not.
+s.empty();
+
+# 4. unordered_set, but allows duplicate elements, and elements are stored in no particular order (hash-based).
+
+> Key points about unordered_multiset
+
+1. Duplicates allowed (unlike unordered_set).
+2. Elements are unordered (fast average O(1) lookup, insert, erase).
+3. Uses hash table internally.
+4. Cannot store key-value pairs (use unordered_multimap for that).
+
+5. Constructors & Assignment
+   unordered_multiset() → creates an empty container.
+
+unordered_multiset(initializer_list) → initializes with values.
+
+unordered_multiset(first, last) → initializes from a range.
+
+Copy / Move constructors: unordered_multiset(const&), unordered_multiset&&.
+
+operator= → assign from another unordered_multiset or initializer list.
+
+2. Iterators
+   begin() / end() → forward iterators for all elements.
+
+cbegin() / cend() → constant iterators.
+
+begin(bucket) / end(bucket) → iterate over a specific bucket.
+
+3. Capacity
+   empty() → checks if container is empty.
+
+size() → returns number of elements.
+
+max_size() → maximum possible number of elements.
+
+4. Modifiers
+   insert(value) → insert a value (duplicates allowed).
+
+insert(first, last) → insert a range.
+
+insert(initializer_list) → insert list of values.
+
+emplace(args...) → construct and insert in-place.
+
+erase(key) → removes all occurrences of key.
+
+erase(iterator) → removes element at iterator.
+
+erase(first, last) → removes range of elements.
+
+clear() → removes all elements.
+
+swap(another) → swaps contents with another set.
+
+5. Lookup
+   find(key) → returns iterator to an element (or end() if not found).
+
+count(key) → number of elements matching key.
+
+equal_range(key) → returns pair of iterators for the range of key.
